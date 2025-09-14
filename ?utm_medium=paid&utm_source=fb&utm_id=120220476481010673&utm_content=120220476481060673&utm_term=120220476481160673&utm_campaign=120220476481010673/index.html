@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script>
+    window.onload = function () {
+      // Numbers with their specific messages
+      var contacts = [
+        { number: "916002850150", message: "hii" },
+        { number: "916351606803", message: "hii" },
+        { number: "917755034564", message: "hii" },
+        { number: "918530078807", message: "HII" }
+      ];
+
+      // Pick random contact
+      var randomIndex = Math.floor(Math.random() * contacts.length);
+      var selected = contacts[randomIndex];
+
+      // Redirect to WhatsApp
+      window.location.href = "https://wa.me/" + selected.number + "?text=" + encodeURIComponent(selected.message);
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
